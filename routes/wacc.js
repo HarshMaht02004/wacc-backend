@@ -28,7 +28,11 @@ function isNumber(n) {
   return typeof n === 'number' && !Number.isNaN(n) && Number.isFinite(n);
 }
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
+  res.send('Hello from Express!');
+});
+
+router.post('/payload', (req, res) => {
   try {
     const body = req.body;
    // Convert input values (in ₹ crore) to rupees
