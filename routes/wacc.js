@@ -28,9 +28,7 @@ function isNumber(n) {
   return typeof n === 'number' && !Number.isNaN(n) && Number.isFinite(n);
 }
 
-router.get('/', (req, res) => {
-  res.send('Hello from Express!');
-});
+
 
 router.post('/payload', (req, res) => {
   try {
